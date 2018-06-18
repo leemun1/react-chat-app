@@ -8,8 +8,8 @@ const Chatkit = require("pusher-chatkit-server");
 const app = express();
 
 const chatkit = new Chatkit.default({
-  instanceLocator: process.env.REACT_APP_CHATKIT_INSTANCE_LOCATOR,
-  key: process.env.REACT_APP_CHATKIT_KEY
+  instanceLocator: process.env.CHATKIT_INSTANCE_LOCATOR,
+  key: process.env.CHATKIT_KEY
 });
 
 app.use(express.static(path.join(__dirname, "client/build")));
