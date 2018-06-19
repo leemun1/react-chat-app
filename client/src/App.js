@@ -32,6 +32,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(process.env);
     if (this.state.currentScreen === "WhatIsYourUsernameScreen") {
       return <UsernameForm onSubmit={this.onUsernameSubmitted} />;
     } else if (this.state.currentScreen === "ChatScreen") {

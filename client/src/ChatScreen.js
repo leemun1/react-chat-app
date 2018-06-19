@@ -10,6 +10,7 @@ const REQUEST_AUTH_URI =
   process.env.REACT_APP_REQUEST_AUTH_URI ||
   "http://localhost:5000/authenticate";
 
+const CHATKIT_INSTANCE_LOCATOR = "v1:us1:095584a2-4cb6-4896-9280-d6522e45cd4d";
 export default class ChatScreen extends Component {
   state = {
     messages: [],
@@ -20,7 +21,7 @@ export default class ChatScreen extends Component {
 
   componentDidMount() {
     const chatManager = new Chatkit.ChatManager({
-      instanceLocator: process.env.REACT_APP_CHATKIT_INSTANCE_LOCATOR,
+      instanceLocator: CHATKIT_INSTANCE_LOCATOR,
       userId: this.props.currentUsername,
       tokenProvider: new Chatkit.TokenProvider({
         url: REQUEST_AUTH_URI
@@ -73,7 +74,9 @@ export default class ChatScreen extends Component {
 
   sendTypingEvent = () => {
     this.state.currentUser
-      .isTypingIn({ roomId: this.state.currentRoom.id })
+      .isTypingIn({
+        roomId: this.state.currentRoom.id
+      })
       .catch(error => console.error("error", error));
   };
 

@@ -16,14 +16,16 @@ export default class UsernameForm extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.onSubmit}>
+      <div className="login">
+        <form className="login__form" onSubmit={this.onSubmit}>
           <input
+            className="login__form--username"
             type="text"
             placeholder="What's your username?"
             onChange={this.onChange}
+            autoFocus
           />
-          <input type="submit" />
+          <button type="submit">Sign In</button>
         </form>
       </div>
     );
