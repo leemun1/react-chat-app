@@ -1,0 +1,47 @@
+// Theme
+$dark-purple: #20002c;
+$light-purple: #cbb4d4;
+
+$navy: #444c5c;
+$white: #f0eff0;
+$punch: #ce5a57;
+$ocean: #78a5a3;
+$warm: #e1b16a;
+
+$font-main: "PT Sans", sans-serif;
+$font-display: "Rajdhani", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: $font-main;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  color: #555;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* > li {
+  list-style: none;
+}
+
+* > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  min-width: 100%;
+}

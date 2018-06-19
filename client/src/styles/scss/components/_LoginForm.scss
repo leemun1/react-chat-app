@@ -1,0 +1,62 @@
+.login {
+  background: linear-gradient(
+    135deg,
+    rgba($light-purple, 0.3) 0%,
+    #e3eeff 100%
+  );
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+
+  &__form {
+    width: 35rem;
+    height: 28rem;
+    background-color: $navy;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+
+    &--brand {
+      color: white;
+      font-weight: 400;
+      font-size: 4rem;
+    }
+
+    &--username {
+      display: block;
+      outline: none;
+      border: none;
+      height: 5rem;
+      padding: 1rem;
+      font-size: 2.3rem;
+      border-radius: 4px;
+      margin: 3rem 0;
+    }
+
+    &--button {
+      display: block;
+      color: $white;
+      font-size: 2.3rem;
+      font-weight: bold;
+      width: 13rem;
+      height: 5rem;
+      background-color: $navy;
+      border: 3px solid $white;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        color: white;
+        background-color: $punch;
+        border-color: $punch;
+      }
+    }
+  }
+}

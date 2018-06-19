@@ -1,2 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,700");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "PT Sans", sans-serif; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
 body {
-  color: red; }
+  color: #555;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+* > li {
+  list-style: none; }
+
+* > a {
+  text-decoration: none;
+  color: inherit; }
+
+#root {
+  min-width: 100%; }
+
+.login {
+  background: linear-gradient(135deg, rgba(203, 180, 212, 0.3) 0%, #e3eeff 100%);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #555; }
+  .login__form {
+    width: 35rem;
+    height: 28rem;
+    background-color: #444c5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px; }
+    .login__form--brand {
+      color: white;
+      font-weight: 400;
+      font-size: 4rem; }
+    .login__form--username {
+      display: block;
+      outline: none;
+      border: none;
+      height: 5rem;
+      padding: 1rem;
+      font-size: 2.3rem;
+      border-radius: 4px;
+      margin: 3rem 0; }
+    .login__form--button {
+      display: block;
+      color: #f0eff0;
+      font-size: 2.3rem;
+      font-weight: bold;
+      width: 13rem;
+      height: 5rem;
+      background-color: #444c5c;
+      border: 3px solid #f0eff0;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s; }
+      .login__form--button:hover {
+        color: white;
+        background-color: #ce5a57;
+        border-color: #ce5a57; }

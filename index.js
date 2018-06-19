@@ -9,9 +9,7 @@ const app = express();
 
 const chatkit = new Chatkit.default({
   instanceLocator: process.env.CHATKIT_INSTANCE_LOCATOR,
-  // instanceLocator: "v1:us1:095584a2-4cb6-4896-9280-d6522e45cd4d",
   key: process.env.CHATKIT_KEY
-  // key:"3d9fd149-92db-48ca-9d3e-97d903c231ae:VJzLLD+n+LLLIDswXbRD2LvIIdHLdGhj1h9hL4ynuzI="
 });
 
 app.use(express.static(path.join(__dirname, "client/build")));

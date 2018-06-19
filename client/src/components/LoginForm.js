@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class UsernameForm extends Component {
+export default class LoginForm extends Component {
   state = {
     username: ""
   };
@@ -18,6 +18,7 @@ export default class UsernameForm extends Component {
     return (
       <div className="login">
         <form className="login__form" onSubmit={this.onSubmit}>
+          <h1 className="login__form--brand">Chat App</h1>
           <input
             className="login__form--username"
             type="text"
@@ -25,7 +26,9 @@ export default class UsernameForm extends Component {
             onChange={this.onChange}
             autoFocus
           />
-          <button type="submit">Sign In</button>
+          <button className="login__form--button" type="submit">
+            Sign In
+          </button>
         </form>
       </div>
     );
