@@ -11,6 +11,13 @@ const REQUEST_AUTH_URI =
   "http://localhost:5000/authenticate";
 
 const CHATKIT_INSTANCE_LOCATOR = "v1:us1:095584a2-4cb6-4896-9280-d6522e45cd4d";
+
+function scrollToBottom() {
+  let messages = document.querySelector(".messagelist");
+  let scrollHeight = messages.scrollHeight;
+  messages.scrollTo(0, scrollHeight);
+}
+
 export default class ChatScreen extends Component {
   state = {
     messages: [],
@@ -37,9 +44,14 @@ export default class ChatScreen extends Component {
           messageLimit: 100,
           hooks: {
             onNewMessage: message => {
-              this.setState({
-                messages: [...this.state.messages, message]
-              });
+              this.setState(
+                {
+                  messages: [...this.state.messages, message]
+                },
+                () => {
+                  scrollToBottom();
+                }
+              );
             },
             onUserStartedTyping: user => {
               this.setState({
@@ -66,10 +78,15 @@ export default class ChatScreen extends Component {
   }
 
   sendMessage = text => {
-    this.state.currentUser.sendMessage({
-      roomId: this.state.currentRoom.id,
-      text
-    });
+    this.state.currentUser
+      .sendMessage({
+        roomId: this.state.currentRoom.id,
+        text
+      })
+      .then(() => {
+        console.log("scrolling!");
+        scrollToBottom();
+      });
   };
 
   sendTypingEvent = () => {
