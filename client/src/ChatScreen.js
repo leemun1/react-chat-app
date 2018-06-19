@@ -88,9 +88,9 @@ export default class ChatScreen extends Component {
             <img src="/img/plane.png" alt="plane" />
             <span>Paperplane</span>
           </div>
-          <div className="sidebar__greeting">
+          <h1 className="sidebar__greeting">
             Hello, {this.props.currentUsername}
-          </div>
+          </h1>
           <WhosOnlineList
             currentUser={this.state.currentUser}
             users={this.state.currentRoom.users}

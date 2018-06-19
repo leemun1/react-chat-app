@@ -1,13 +1,19 @@
 .sidebar {
   align-self: stretch;
-  width: 20rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
 
   &__brand {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+
     img {
       width: 5rem;
       height: 5rem;
+      margin-right: 1rem;
     }
     span {
       font-size: 3rem;
@@ -16,5 +22,10 @@
   }
 
   &__greeting {
+    border-top-right-radius: 10px;
+    background-color: $navy;
+    color: $white;
+    font-size: 3rem;
+    padding: 1.5rem;
   }
 }

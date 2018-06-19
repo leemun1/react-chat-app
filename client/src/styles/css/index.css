@@ -13,7 +13,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #555;
+  color: #444;
   background: transparent;
   display: flex;
   justify-content: center;
@@ -62,7 +62,7 @@ body {
       margin: 3rem 0; }
     .login__form--button {
       display: block;
-      color: #f0eff0;
+      color: #f8f8f8;
       font-size: 2.3rem;
       font-weight: bold;
       width: 13rem;
@@ -76,9 +76,6 @@ body {
         color: white;
         background-color: #ce5a57; }
 
-.chat > * {
-  border: 1px solid red; }
-
 .chat {
   background: linear-gradient(135deg, rgba(203, 180, 212, 0.3) 0%, #e3eeff 100%);
   min-height: 100vh;
@@ -90,16 +87,57 @@ body {
 
 .sidebar {
   align-self: stretch;
-  width: 20rem; }
+  width: 25rem;
+  display: flex;
+  flex-direction: column; }
   .sidebar__brand {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0; }
     .sidebar__brand img {
       width: 5rem;
-      height: 5rem; }
+      height: 5rem;
+      margin-right: 1rem; }
     .sidebar__brand span {
       font-size: 3rem;
       font-weight: 700; }
+  .sidebar__greeting {
+    border-top-right-radius: 10px;
+    background-color: #444c5c;
+    color: #f8f8f8;
+    font-size: 3rem;
+    padding: 1.5rem; }
+
+.online {
+  background-color: #444c5c;
+  flex: 1;
+  color: #f8f8f8; }
+  .online__header {
+    font-size: 2.5rem;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border-top: 2px solid white; }
+
+.onlinelist__item {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #f8f8f8;
+  display: flex;
+  align-items: center; }
+  .onlinelist__item span {
+    margin-right: 0.5rem;
+    font-size: 2.5rem; }
+    .onlinelist__item span.present {
+      color: #42be31; }
+    .onlinelist__item span.away {
+      color: grey; }
+
+.onlinelist--loading {
+  color: #444c5c;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem; }
 
 .messages {
   flex: 1; }

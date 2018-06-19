@@ -1,0 +1,39 @@
+.online {
+  background-color: $navy;
+  flex: 1;
+  color: $white;
+  &__header {
+    font-size: 2.5rem;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border-top: 2px solid white;
+  }
+}
+
+.onlinelist {
+  &__item {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: $white;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 0.5rem;
+      font-size: 2.5rem;
+
+      &.present {
+        color: rgb(66, 190, 49);
+      }
+      &.away {
+        color: grey;
+      }
+    }
+  }
+  &--loading {
+    color: $navy;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+}
