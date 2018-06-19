@@ -10,7 +10,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow: hidden; }
 
 body {
   color: #444;
@@ -79,7 +80,6 @@ body {
 .chat {
   background: linear-gradient(135deg, rgba(203, 180, 212, 0.3) 0%, #e3eeff 100%);
   min-height: 100vh;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -142,14 +142,12 @@ body {
 .messages {
   flex: 1;
   display: flex;
-  flex-direction: column; }
-
-.messages > * {
-  border: 1px solid red; }
+  flex-direction: column;
+  max-height: 100vh; }
 
 .messagelist {
   flex: 1;
-  padding-bottom: 3rem; }
+  overflow-y: scroll; }
   .messagelist__item {
     padding: 0 1.5rem;
     margin: 1rem 0;
@@ -160,3 +158,47 @@ body {
       font-weight: 700; }
     .messagelist__item--message {
       font-size: 2rem; }
+
+.typing-indicator {
+  font-size: 2rem;
+  padding: 0.5rem 1rem; }
+
+.sendmessage__form {
+  margin: 1rem;
+  margin-right: 2rem;
+  display: flex; }
+  .sendmessage__form--message, .sendmessage__form--button {
+    background: none;
+    outline: none;
+    border: none; }
+  .sendmessage__form--message {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    height: 5rem;
+    border: 3px solid rgba(68, 76, 92, 0.5);
+    border-right: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    flex: 1; }
+    .sendmessage__form--message:focus {
+      border-color: #444c5c; }
+    .sendmessage__form--message:focus + button {
+      color: #444c5c;
+      border-color: #444c5c; }
+      .sendmessage__form--message:focus + button:hover {
+        color: #f8f8f8; }
+  .sendmessage__form--button {
+    color: rgba(68, 76, 92, 0.5);
+    font-size: 2.3rem;
+    font-weight: bold;
+    width: 8rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 3px solid rgba(68, 76, 92, 0.5);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px; }
+    .sendmessage__form--button:hover {
+      color: #f8f8f8;
+      background-color: #ce5a57;
+      border-color: #444c5c; }

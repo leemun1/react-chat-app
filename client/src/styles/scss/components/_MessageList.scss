@@ -1,6 +1,7 @@
 .messagelist {
   flex: 1;
-  padding-bottom: 3rem;
+  overflow-y: scroll;
+
   &__item {
     padding: 0 1.5rem;
     margin: 1rem 0;
@@ -15,4 +16,9 @@
       font-size: 2rem;
     }
   }
+}
+
+.typing-indicator {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
 }
