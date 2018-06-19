@@ -1,0 +1,17 @@
+.chat > * {
+  border: 1px solid red;
+}
+
+.chat {
+  background: linear-gradient(
+    135deg,
+    rgba($light-purple, 0.3) 0%,
+    #e3eeff 100%
+  );
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  color: #555;
+}

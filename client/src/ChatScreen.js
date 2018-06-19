@@ -82,19 +82,28 @@ export default class ChatScreen extends Component {
 
   render() {
     return (
-      <div>
-        <h1 styles={{ color: "red" }}>Chat</h1>
-        <p>Hello, {this.props.currentUsername}</p>
-        <WhosOnlineList
-          currentUser={this.state.currentUser}
-          users={this.state.currentRoom.users}
-        />
-        <MessageList messages={this.state.messages} />
-        <TypingIndicator usersWhoAreTyping={this.state.usersWhoAreTyping} />
-        <SendMessageForm
-          onSubmit={this.sendMessage}
-          onChange={this.sendTypingEvent}
-        />
+      <div className="chat">
+        <div className="sidebar">
+          <div className="sidebar__brand">
+            <img src="/img/plane.png" alt="plane" />
+            <span>Paperplane</span>
+          </div>
+          <div className="sidebar__greeting">
+            Hello, {this.props.currentUsername}
+          </div>
+          <WhosOnlineList
+            currentUser={this.state.currentUser}
+            users={this.state.currentRoom.users}
+          />
+        </div>
+        <div className="messages">
+          <MessageList messages={this.state.messages} />
+          <TypingIndicator usersWhoAreTyping={this.state.usersWhoAreTyping} />
+          <SendMessageForm
+            onSubmit={this.sendMessage}
+            onChange={this.sendTypingEvent}
+          />
+        </div>
       </div>
     );
   }

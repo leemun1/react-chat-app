@@ -14,8 +14,7 @@
 
   &__form {
     width: 35rem;
-    height: 28rem;
-    background-color: $navy;
+    height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,9 +22,10 @@
     border-radius: 7px;
 
     &--brand {
-      color: white;
-      font-weight: 400;
+      color: $navy;
+      font-weight: bold;
       font-size: 4rem;
+      margin-top: 1rem;
     }
 
     &--username {
@@ -47,7 +47,7 @@
       width: 13rem;
       height: 5rem;
       background-color: $navy;
-      border: 3px solid $white;
+      border: 3px solid transparent;
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.2s;
@@ -55,7 +55,6 @@
       &:hover {
         color: white;
         background-color: $punch;
-        border-color: $punch;
       }
     }
   }

@@ -6,9 +6,13 @@ export default class TypingIndicator extends Component {
     if (typingUsers.length === 0) {
       return null;
     } else if (typingUsers.length === 1) {
-      return <p>{typingUsers[0]} is typing...</p>;
+      return <p className="typing-indicator">{typingUsers[0]} is typing...</p>;
     } else if (typingUsers.length > 1) {
-      return <p>{typingUsers.join(" and ")} are typing...</p>;
+      return (
+        <p className="typing-indicator">
+          {typingUsers.join(" and ")} are typing...
+        </p>
+      );
     }
   }
 }

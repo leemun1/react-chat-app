@@ -18,7 +18,8 @@ export default class LoginForm extends Component {
     return (
       <div className="login">
         <form className="login__form" onSubmit={this.onSubmit}>
-          <h1 className="login__form--brand">Chat App</h1>
+          <img src="/img/plane.png" alt="plane" />
+          <h1 className="login__form--brand">Paperplane</h1>
           <input
             className="login__form--username"
             type="text"

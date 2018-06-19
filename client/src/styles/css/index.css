@@ -40,17 +40,17 @@ body {
   color: #555; }
   .login__form {
     width: 35rem;
-    height: 28rem;
-    background-color: #444c5c;
+    height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 7px; }
     .login__form--brand {
-      color: white;
-      font-weight: 400;
-      font-size: 4rem; }
+      color: #444c5c;
+      font-weight: bold;
+      font-size: 4rem;
+      margin-top: 1rem; }
     .login__form--username {
       display: block;
       outline: none;
@@ -68,11 +68,38 @@ body {
       width: 13rem;
       height: 5rem;
       background-color: #444c5c;
-      border: 3px solid #f0eff0;
+      border: 3px solid transparent;
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.2s; }
       .login__form--button:hover {
         color: white;
-        background-color: #ce5a57;
-        border-color: #ce5a57; }
+        background-color: #ce5a57; }
+
+.chat > * {
+  border: 1px solid red; }
+
+.chat {
+  background: linear-gradient(135deg, rgba(203, 180, 212, 0.3) 0%, #e3eeff 100%);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  color: #555; }
+
+.sidebar {
+  align-self: stretch;
+  width: 20rem; }
+  .sidebar__brand {
+    display: flex;
+    align-items: center; }
+    .sidebar__brand img {
+      width: 5rem;
+      height: 5rem; }
+    .sidebar__brand span {
+      font-size: 3rem;
+      font-weight: 700; }
+
+.messages {
+  flex: 1; }
